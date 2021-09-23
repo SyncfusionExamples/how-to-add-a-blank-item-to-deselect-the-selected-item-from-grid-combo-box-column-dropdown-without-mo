@@ -62,6 +62,8 @@ public class CustomComboBoxCellRenderer : GridCellComboBoxRenderer
 
 ![GridComboBoxColumn with blank item](ComboBox_BlankItem.png)
 
+KB article - [How to add a blank item to deselect the selected item from GridComboBoxColumn dropdown without modifying actual source in WPF DataGrid?](https://www.syncfusion.com/kb/12382/how-to-add-a-blank-item-to-deselect-the-selected-item-from-gridcomboboxcolumn-dropdown)
+
 ## Requirements to run the demo
 Visual Studio 2015 and above versions
 
