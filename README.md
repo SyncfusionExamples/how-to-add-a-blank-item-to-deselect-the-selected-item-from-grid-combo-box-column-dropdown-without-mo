@@ -1,13 +1,10 @@
-# How to add a blank item to deselect the selected item from GridComboBoxColumn dropdown without modifying actual source in WPF DataGrid?
+# How to Add a Blank Item to Deselect the Selected Item from GridComboBoxColumn Dropdown Without Modifying Actual Source in WPF DataGrid?
 
-## About the sample
+This sample illustrates how to add a blank item to deselect the selected item from [GridComboBoxColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridComboBoxColumn.html) dropdown without modifying actual source in [WPF DataGrid](https://www.syncfusion.com/wpf-controls/datagrid)(SfDataGrid).
 
-This sample illustrates how to add a blank item to deselect the selected item from GridComboBoxColumn dropdown without modifying actual source in WPF DataGrid.
+By default, DataGrid [GridComboBoxColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridComboBoxColumn.html) doesn't have any direct support to add blank item without modifying the ItemsSource of the `GridComboBoxColumn`. However, you can add blank item to the dropdown by adding a ComboBoxItem to `GridComboBoxColumn.ItemsSource`. 
 
-By default, [WPF DataGrid](https://www.syncfusion.com/wpf-ui-controls/datagrid)(SfDataGrid) [GridComboBoxColumn](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridComboBoxColumn.html) doesn’t have any direct support to add blank item without modifying the ItemsSource of the GridComboBoxColumn. However, you can add blank item to the dropdown by adding a ComboBoxItem to GridComboBoxColumn.ItemsSource. 
-
-```Xaml
-
+``` xml
 <Window.Resources>
      <CollectionViewSource x:Key="ComboBoxItems" Source="{Binding Countries}" />
 </Window.Resources>
@@ -33,14 +30,14 @@ By default, [WPF DataGrid](https://www.syncfusion.com/wpf-ui-controls/datagrid)(
 
 ```
 
-You can set the SelectedItem of the ComboBox to null when the blank item is selected by creating custom renderer for the GridComboBoxcolumn.
+You can set the `SelectedItem` of the ComboBox to null when the blank item is selected by creating custom renderer for the `GridComboBoxcolumn`.
 
 ``` c#
 
 public MainWindow()
  {
-     InitializeComponent();
-     this.dataGrid.CellRenderers["ComboBox"] = new CustomComboBoxCellRenderer();
+    InitializeComponent();
+    this.dataGrid.CellRenderers["ComboBox"] = new CustomComboBoxCellRenderer();
  }
 
 public class CustomComboBoxCellRenderer : GridCellComboBoxRenderer
@@ -60,12 +57,7 @@ public class CustomComboBoxCellRenderer : GridCellComboBoxRenderer
 
 ```
 
-![GridComboBoxColumn with blank item](ComboBox_BlankItem.png)
-
-KB article - [How to add a blank item to deselect the selected item from GridComboBoxColumn dropdown without modifying actual source in WPF DataGrid?](https://www.syncfusion.com/kb/12382/how-to-add-a-blank-item-to-deselect-the-selected-item-from-gridcomboboxcolumn-dropdown)
+![GridComboBoxColumn with blank item](ComboBoxBlankItem.png)
 
 ## Requirements to run the demo
 Visual Studio 2015 and above versions
-
-
-
